@@ -1,0 +1,23 @@
+<!-- update_employee.jsp -->
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Update Employee</title>
+</head>
+<body>
+    <h2>Update Employee Details</h2>
+    <form action="UpdateEmployeeServlet" method="post">
+        <!-- Hidden field for ID -->
+        <input type="hidden" name="id" value="${employee.id}">
+
+        Name: <input type="text" name="name" value="${employee.name}" required><br><br>
+        Email: <input type="email" name="email" value="${employee.email}" required><br><br>
+        Department: <input type="text" name="department" value="${employee.department}" required><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+
+    <br>
+    <a href="ViewEmployeesServlet">Back to View</a>
+</body>
+</html>
